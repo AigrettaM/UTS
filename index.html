@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donor Darah</title>
+    <link rel="icon" type="image/png" href="assets/image/Group 9.png">
+    <title>RedWave</title>
     <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
@@ -11,7 +12,7 @@
         <nav>
             <div class="logo">
                 <img id="image1" src="assets/image/BloodLink Creative Logo 1 (vectorized).png" alt="logo">
-                <h1>Donor Darah</h1>
+                <img id="image2" src="assets/image/Group 6 (1).png" alt="logo2">
             </div>
             <ul class="nav-links">
                 <li><a href="register.html">Donor Sekarang</a></li>
@@ -21,6 +22,61 @@
         </nav>
     </header>    
 
+    <!-- <section id="banner">
+        <div class="banner">
+            <p><strong>Event Donor:</strong> Ayo ikut donor darah di pusat kesehatan kota pada 25 Maret 2025.</p>
+        </div>
+        <div class="banner emergency">
+            <p><strong>Kebutuhan Darurat:</strong> Stok darah golongan O menipis, segera lakukan donor!</p>
+        </div>
+        <div class="banner promo">
+            <p><strong>Promo Reward:</strong> Donorkan darah dan dapatkan voucher kesehatan gratis!</p>
+        </div>
+    </section> -->
+
+    <!-- <section id="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="" alt="Donor Darah 1">
+                <img src="img2.jpg" alt="Donor Darah 2">
+                <img src="img3.jpg" alt="Donor Darah 3">
+            </div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </section> -->
+    <div class="carousel">
+        <div class="slide fade">
+            <img src="assets/image/foto 1.jpg" alt="Gambar 1">
+            <div class="caption">
+                <h2>Tahun Berganti, Dedikasi Tak Berhenti</h2>
+                <p>Bergabunglah dalam misi kami untuk membantu mereka yang membutuhkan.</p>
+                <button class="donate-btn">Donasi</button>
+            </div>
+        </div>
+        
+        <div class="slide fade">
+            <img src="assets/image/foto 2.png" alt="Gambar 2">
+            <div class="caption">
+                <h2>Bersama, Kita Bisa</h2>
+                <p>Dukung program kemanusiaan untuk masa depan yang lebih baik.</p>
+                <button class="donate-btn">Donasi</button>
+            </div>
+        </div>
+    
+        <div class="slide fade">
+            <img src="assets/image/foto 3.jpg" alt="Gambar 3">
+            <div class="caption">
+                <h2>Harapan Baru di Setiap Langkah</h2>
+                <p>Setiap donasi memberikan harapan bagi mereka yang membutuhkan.</p>
+                <button class="donate-btn">Donasi</button>
+            </div>
+        </div>
+    
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+    
     <section id="banner">
         <div class="banner">
             <p><strong>Event Donor:</strong> Ayo ikut donor darah di pusat kesehatan kota pada 25 Maret 2025.</p>
@@ -31,18 +87,6 @@
         <div class="banner promo">
             <p><strong>Promo Reward:</strong> Donorkan darah dan dapatkan voucher kesehatan gratis!</p>
         </div>
-    </section>
-
-    <section id="carousel">
-        <div class="carousel-container">
-            <div class="carousel-slide">
-                <img src="img1.jpg" alt="Donor Darah 1">
-                <img src="img2.jpg" alt="Donor Darah 2">
-                <img src="img3.jpg" alt="Donor Darah 3">
-            </div>
-        </div>
-        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </section>
 
     <section id="statistik">
@@ -67,20 +111,47 @@
                     <li><strong>O:</strong> 10 kantong (Kritis!)</li>
                     <li><strong>AB:</strong> 25 kantong</li>
                 </ul>
-                <button onclick="alert('Ayo donor darah sekarang!')">Donor Sekarang</button>
+                <button onclick="openPopup()">Donor Sekarang</button>
+                <div id="popup" class="popup-container" onclick="closeOutsidePopup(event)">
+                    <div class="popup-content">
+                        <span class="close-btn" onclick="closePopup()">&times;</span>
+                        <h2>Popup dengan Klik Luar</h2>
+                        <p>Klik di luar popup untuk menutup.</p>
+                        <button onclick="closePopup()">Tutup</button>
+                    </div>
+                </div>                
             </div>
         </div>
     </section>
 
     <section id="cta">
         <h2>Siap Menjadi Pahlawan?</h2>
-        <button id="donorNow" onclick="alert('Ayo donor darah sekarang!')">Donor Sekarang</button>
+        <button onclick="openPopup()">Donor Sekarang</button>
+                <div id="popup" class="popup-container" onclick="closeOutsidePopup(event)">
+                    <div class="popup-content">
+                        <span class="close-btn" onclick="closePopup()">&times;</span>
+                        <h2>Popup dengan Klik Luar</h2>
+                        <p>Klik di luar popup untuk menutup.</p>
+                        <button onclick="closePopup()">Tutup</button>
+                    </div>
+                </div>
         <button id="findLocation">Lihat Lokasi Terdekat</button>
     </section>
 
     <footer>
-        <p>&copy; 2025 RedWave.</p>
-        <p>halo.</p>
+        <div class="footer-top">
+        <button class="contact-btn">Kontak Kami</button>
+            <div class="social-media">
+                <span>Ikuti sosial media kami</span>
+                <a href="#"><img src="assets/image/icons8-x-30.png" alt="X"></a>
+                <a href="#"><img src="assets/image/icons8-instagram-30.png" alt="Instagram"></a>
+                <a href="#"><img src="assets/image/icons8-youtube-30.png" alt="YouTube"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 RedWaves. Semua hak dilindungi.</p>
+            <p><i>Kami berkomitmen untuk memberikan dampak positif bagi masyarakat. Hubungi kami untuk berkontribusi dalam perubahan yang lebih baik.</i></p>
+        </div>
     </footer>
 
     <script src="js/index.js"></script>

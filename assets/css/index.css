@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 500;
 }   
 
 body {
@@ -18,7 +17,7 @@ body {
 
 header {
     background: white; /* Warna merah khas donor darah */
-    color: red;
+    color: #B31312;
     padding: 15px 50px;
     display: flex;
     justify-content: center;
@@ -60,15 +59,20 @@ nav ul li a {
     align-items: center;
 }
 
-.logo img {
-    width: 50px; /* Sesuaikan ukuran logo */
+#image1 {
+    width: 80px; /* Sesuaikan ukuran logo */
     height: auto;
     margin-right: 10px;
 }
 
-.logo h1 {
-    font-size: 22px;
-    font-weight: bold;
+#image2 {
+    width: 75px; /* Sesuaikan ukuran logo */
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo ul{
+    text-decoration: none;
 }
 
 /* Style untuk menu navigasi */
@@ -84,7 +88,7 @@ nav ul li a {
 
 .nav-links a {
     text-decoration: none;
-    color: red;
+    color: #B31312;
     font-size: 16px;
     font-weight: bold;
     padding: 10px 15px;
@@ -94,7 +98,7 @@ nav ul li a {
 
 /* Hover efek */
 .nav-links a:hover {
-    background: red;
+    background: #B31312;
     color: white;
 }
 
@@ -125,7 +129,7 @@ nav ul li a {
 }
 
 .emergency {
-    background: #f44336;
+    background: #B31312;
     color: white;
 }
 
@@ -154,7 +158,7 @@ nav ul li a {
 
 
 button {
-    background: #c82333;
+    background: #B31312;
     color: white;
     border: none;
     padding: 15px 25px;
@@ -165,14 +169,7 @@ button {
 }
 
 button:hover {
-    background: #9b1d27;
-}
-
-footer {
-    background: #333;
-    color: white;
-    padding: 10px;
-    margin-top: 20px;
+    background: rgb(226, 42, 57);
 }
 
 .statistik-container {
@@ -200,7 +197,7 @@ footer {
 /* Batang grafik */
 .bar {
     width: 50px;
-    background: #c82333;
+    background: #B31312;
     color: white;
     text-align: center;
     position: relative;
@@ -230,7 +227,7 @@ footer {
 }
 
 .info h3 {
-    color: #c82333;
+    color: #B31312;
 }
 
 .info ul {
@@ -244,7 +241,7 @@ footer {
 }
 
 .info button {
-    background: #c82333;
+    background: #B31312;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -255,7 +252,7 @@ footer {
 }
 
 .info button:hover {
-    background: #a71d2a;
+    background: rgb(226, 42, 57);
 }
 
 /* Responsif untuk layar kecil */
@@ -273,4 +270,160 @@ footer {
         width: 100%;
         text-align: center;
     }
+}
+
+.footer-top {
+    background-color: #B31312;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-btn {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.social-media a img {
+    width: 24px;
+    margin-left: 10px;
+}
+
+.social-media span{
+    font-weight: bold;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding: 10px;
+    background-color: #333;
+}
+
+footer {
+    color: white;
+} 
+
+/* Background popup dengan efek blur */
+.popup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi transparan */
+    backdrop-filter: blur(1px); /* Efek blur */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* Konten popup dengan efek scale */
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+    position: relative;
+    transform: scale(0.7);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Saat popup aktif (fade-in) */
+.popup-container.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-container.show .popup-content {
+    transform: scale(1);
+}
+
+/* Tombol close */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.caption {
+    position: absolute;
+    text-align: left;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 40%;
+}
+
+.caption h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.caption p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.donate-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.fade {
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
 }
