@@ -1,11 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Donor Darah</title>
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <div class="logo">
+                <img id="image1" src="assets/image/BloodLink Creative Logo 1 (vectorized).png" alt="logo">
+                <h1>Donor Darah</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="register.html">Donor Sekarang</a></li>
+                <li><a href="informasi.html">Informasi</a></li>
+                <li><a href="#statistik">Statistik</a></li>
+            </ul>
+        </nav>
+    </header>    
+
+    <section id="banner">
+        <div class="banner">
+            <p><strong>Event Donor:</strong> Ayo ikut donor darah di pusat kesehatan kota pada 25 Maret 2025.</p>
+        </div>
+        <div class="banner emergency">
+            <p><strong>Kebutuhan Darurat:</strong> Stok darah golongan O menipis, segera lakukan donor!</p>
+        </div>
+        <div class="banner promo">
+            <p><strong>Promo Reward:</strong> Donorkan darah dan dapatkan voucher kesehatan gratis!</p>
+        </div>
+    </section>
+
+    <section id="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="img1.jpg" alt="Donor Darah 1">
+                <img src="img2.jpg" alt="Donor Darah 2">
+                <img src="img3.jpg" alt="Donor Darah 3">
+            </div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+
+    <section id="statistik">
+        <h2>Statistik Donor & Stok Darah</h2>
+        <div class="statistik-container">
+            <!-- Diagram Batang -->
+            <div class="chart">
+                <div class="bar" id="barA"><span class="label">A</span></div>
+                <div class="bar" id="barB"><span class="label">B</span></div>
+                <div class="bar" id="barO"><span class="label">O</span></div>
+                <div class="bar" id="barAB"><span class="label">AB</span></div>
+            </div>
+
+            <!-- Penjelasan Statistik -->
+            <div class="info">
+                <h3>Kenapa Donor Darah Penting?</h3>
+                <p>Stok darah yang cukup sangat dibutuhkan untuk membantu pasien yang membutuhkan transfusi, seperti korban kecelakaan, pasien operasi, dan penderita penyakit tertentu.</p>
+                <p>Berikut adalah stok darah yang tersedia saat ini:</p>
+                <ul>
+                    <li><strong>A:</strong> 45 kantong</li>
+                    <li><strong>B:</strong> 30 kantong</li>
+                    <li><strong>O:</strong> 10 kantong (Kritis!)</li>
+                    <li><strong>AB:</strong> 25 kantong</li>
+                </ul>
+                <button onclick="alert('Ayo donor darah sekarang!')">Donor Sekarang</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta">
+        <h2>Siap Menjadi Pahlawan?</h2>
+        <button id="donorNow" onclick="alert('Ayo donor darah sekarang!')">Donor Sekarang</button>
+        <button id="findLocation">Lihat Lokasi Terdekat</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 RedWave.</p>
+        <p>halo.</p>
+    </footer>
+
+    <script src="js/index.js"></script>
 </body>
 </html>
