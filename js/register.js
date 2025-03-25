@@ -8,7 +8,7 @@ function handleRegister(event) {
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
 
-    if (nama && nik && golonganDarah && gender && usernama && password) {
+    if (nama && nik && golonganDarah && gender && username && password) {
         alert(`Pendaftaran berhasil!\nNama: ${nama}\nUsername: ${username}\nNIK: ${nik}\nGolongan Darah: ${golonganDarah}\nJenis Kelamin: ${gender.value}`);
         window.location.href = "login.html";
     } else {
