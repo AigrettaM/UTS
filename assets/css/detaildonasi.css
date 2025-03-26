@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}   
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+header {
+    background: white; /* Warna merah khas donor darah */
+    color: #B31312;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Style untuk logo dan teks */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+#image1 {
+    width: 80px; /* Sesuaikan ukuran logo */
+    height: auto;
+    margin-right: 10px;
+}
+
+#image2 {
+    width: 75px; /* Sesuaikan ukuran logo */
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo ul{
+    text-decoration: none;
+}
+
+/* Style untuk menu navigasi */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #B31312;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Hover efek */
+.nav-links a:hover {
+    background: #B31312;
+    color: white;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+button {
+    background: #B31312;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px;
+}
+
+button:hover {
+    background: rgb(226, 42, 57);
+}
+
+
+/* Label pada batang */
+.label {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: black;
+}
+
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .statistik-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chart {
+        width: 100%;
+    }
+
+    .info {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.footer-top {
+    background-color: #B31312;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-btn {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.social-media a img {
+    width: 24px;
+    margin-left: 10px;
+}
+
+.social-media span{
+    font-weight: bold;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding: 10px;
+    background-color: #333;
+}
+
+footer {
+    color: white;
+} 
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --primary-red: #DC2626;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+}
+
+.donation-container {
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.donation-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.page-title {
+    color: var(--primary-red);
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.page-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-red);
+}
+
+.section-title {
+    color: var(--primary-red);
+    border-bottom: 2px solid var(--primary-red);
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.donor-info {
+    background-color: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.donor-info p {
+    margin: 12px 0;
+    color: var(--text-secondary);
+    display: flex;
+    justify-content: space-between;
+}
+
+.donor-info p span:first-child {
+    font-weight: 600;
+    color: var(--text-primary);
+    min-width: 140px;
+}
+
+.qr-code-section {
+    flex: 0 0 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-code {
+    max-width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.qr-code:hover {
+    transform: scale(1.05);
+}
+
+.qr-code-instruction {
+    color: var(--text-secondary);
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.print-confirmation-btn {
+    width: 100%;
+    background-color: var(--primary-red);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.print-confirmation-btn:hover {
+    background-color: #B91C1C;
+}
+
+@media (max-width: 768px) {
+    .donation-container {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .qr-code-section {
+        align-self: center;
+    }
+}

@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}   
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+header {
+    background: white; /* Warna merah khas donor darah */
+    color: #B31312;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Style untuk logo dan teks */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+#image1 {
+    width: 80px; /* Sesuaikan ukuran logo */
+    height: auto;
+    margin-right: 10px;
+}
+
+#image2 {
+    width: 75px; /* Sesuaikan ukuran logo */
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo ul{
+    text-decoration: none;
+}
+
+/* Style untuk menu navigasi */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #B31312;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Hover efek */
+.nav-links a:hover {
+    background: #B31312;
+    color: white;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+button {
+    background: #B31312;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px;
+}
+
+button:hover {
+    background: rgb(226, 42, 57);
+}
+
+
+/* Label pada batang */
+.label {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: black;
+}
+
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .statistik-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chart {
+        width: 100%;
+    }
+
+    .info {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.footer-top {
+    background-color: #B31312;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-btn {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.social-media a img {
+    width: 24px;
+    margin-left: 10px;
+}
+
+.social-media span{
+    font-weight: bold;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding: 10px;
+    background-color: #333;
+}
+
+footer {
+    color: white;
+} 
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+:root {
+    --primary-red: #B31312;
+    --dark-blue: #2a2b4c;
+    --light-background: #f4f6f9;
+    --soft-gray: #e0e4eb;
+    --white: #ffffff;
+}
+
+.container {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 
+        0 10px 25px rgba(42, 43, 76, 0.1),
+        0 5px 15px rgba(42, 43, 76, 0.05);
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 450px;
+    margin: 30px auto;
+    border: 1px solid var(--soft-gray);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg, 
+        transparent, 
+        rgba(42, 43, 76, 0.03), 
+        transparent
+    );
+    transform: rotate(-45deg);
+    z-index: 1;
+    pointer-events: none;
+}
+
+h1 {
+    color: var(--dark-blue);
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+#donationForm {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+
+#donationForm label {
+    margin-top: 15px;
+    color: var(--dark-blue);
+    font-weight: 600;
+    text-align: left;
+    transition: color 0.3s ease;
+}
+
+#donationForm input, 
+#donationForm select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid var(--soft-gray);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: var(--light-background);
+}
+
+#donationForm input:read-only {
+    background-color: #f9f9f9;
+    color: #666;
+    cursor: not-allowed;
+}
+
+#donationForm input:focus,
+#donationForm select:focus {
+    outline: none;
+    border-color: var(--primary-red);
+    box-shadow: 0 0 0 3px rgba(179, 19, 18, 0.1);
+}
+
+#donationForm button {
+    background-color: var(--primary-red);
+    color: var(--white);
+    border: none;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+#donationForm button:hover {
+    background-color: var(--dark-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(179, 19, 18, 0.2);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .container {
+        margin: 20px 10px;
+        padding: 30px 20px;
+    }
+}
+
+/* Subtle Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: slideIn 0.7s ease-out;
+}
