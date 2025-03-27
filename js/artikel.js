@@ -4,14 +4,14 @@ const articles = [
         image: "https://img.antaranews.com/cache/1200x800/2025/02/17/RAPP.jpg.webp",
         description: "Kegiatan donor darah diadakan untuk membantu sesama.",
         date: "10 Maret 2025",
-        link: "#"
+        link: "artikelSatu.html"
     },
     {
         title: "Pelatihan Relawan",
         image: "https://www.pmimalangkota.or.id/wp-content/uploads/elementor/thumbs/first-aid-diklat-PMI-PMR-KSR-relawan-Kota-Malang-korps-Red-Cross-Indonesia-website-qchqw1gmqhu7wdy6rfn52g6r1ccycma3vcrbfy7ijm.jpg",
         description: "Relawan PMI mengikuti pelatihan tanggap darurat.",
         date: "5 Maret 2025",
-        link: "#"
+        link: "artikelDua.html"
     },
     {
         title: "Edukasi Kesehatan",
@@ -80,10 +80,10 @@ function displayArticles(filteredArticles) {
         articleElement.classList.add("article-card");
         articleElement.innerHTML = `
             <img src="${article.image}" alt="${article.title}">
-            <h3>${article.title}</h3>
-             <p><strong>${article.date}</strong></p>
-            <p>${article.description}</p>
-            <a href="${article.link}">Baca Selengkapnya</a>
+            <h3 class="article-title">${article.title}</h3>
+            <p class="article-date"><strong>${article.date}</strong></p>
+            <p class="article-excerpt">${article.description}</p>
+            <a class="read-more-btn" href="${article.link}">Baca Selengkapnya</a>
         `;
         articlesContainer.appendChild(articleElement);
     });
@@ -93,14 +93,14 @@ function displayHighlightArticle() {
     const highlightContainer = document.getElementById("highlight");
     const latestArticle = articles[0];
     highlightContainer.innerHTML = `
-    <h2 class="highlight-title">Artikel Terbaru</h2>    
-    <div class="highlight-card">
-            <img src="${latestArticle.image}" alt="${latestArticle.title}">
-            <div class="highlight-content">
+    <h2 class="highlight-article-title">Artikel Terbaru</h2>    
+    <div>
+            <img class="highlight-article-image" src="${latestArticle.image}" alt="${latestArticle.title}">
+            <div>
                 <p class="article-date">${latestArticle.date}</p>
-                <h2>${latestArticle.title}</h2>
-                <p>${latestArticle.description}</p>
-                <a href="${latestArticle.link}" class="read-more">Baca Selengkapnya</a>
+                <h2 class="article-title">${latestArticle.title}</h2>
+                <p class="highlight-article-excerpt">${latestArticle.description}</p>
+                <a class="read-more-btn" href="${latestArticle.link}" class="read-more">Baca Selengkapnya</a>
             </div>
         </div>
     `;
@@ -121,4 +121,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     displayArticles(articles);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    searchArticles();
 });

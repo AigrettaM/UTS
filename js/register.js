@@ -10,7 +10,7 @@ function handleRegister(event) {
 
     if (nama && nik && golonganDarah && gender && username && password) {
         alert(`Pendaftaran berhasil!\nNama: ${nama}\nUsername: ${username}\nNIK: ${nik}\nGolongan Darah: ${golonganDarah}\nJenis Kelamin: ${gender}`);
-        window.location.href = "login.html";
+        window.location.href = "donasi.html";
     } else {
         alert("Harap isi semua kolom!");
     }

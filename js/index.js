@@ -60,3 +60,6 @@ function changeSlide(n) {
     showSlides();
 }
 
+document.getElementById("findLocation").addEventListener("click", function() {
+    window.location.href = "lokasi.html";
+});
