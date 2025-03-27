@@ -78,13 +78,13 @@ nav ul li a {
 .nav-links {
     list-style: none;
     display: flex;
-    align-items: center;  /* Pastikan semua elemen sejajar */
+    align-items: center;  /* Supaya sejajar */
     gap: 20px;
 }
 
 .nav-links li {
-    display: flex; /* Pastikan tiap item fleksibel */
-    align-items: center; /* Menyelaraskan isi elemen */
+    display: flex;
+    align-items: center;
 }
 
 .nav-links a {
@@ -92,11 +92,12 @@ nav ul li a {
     color: #B31312;
     font-size: 16px;
     font-weight: bold;
-    padding: 10px 15px;
+    padding: 8px; /* Beri sedikit padding supaya hover tetap ada */
     border-radius: 5px;
     transition: background 0.3s ease-in-out;
     display: flex;
-    align-items: center; /* Supaya teks sejajar */
+    align-items: center;
+    justify-content: center;
 }
 
 /* Hover efek */
@@ -105,28 +106,26 @@ nav ul li a {
     color: white;
 }
 
-/* Gaya untuk gambar profil */
+/* Gaya untuk ikon logout */
 #logout {
     width: 30px;
     height: 30px;
-    border-radius: 50%;
     object-fit: cover;
-    vertical-align: middle;
-    display: flex;
-    align-items: center;
+    transition: filter 0.3s ease-in-out;
 }
 
-/* Responsif untuk layar kecil */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
+#logout:hover {
+    filter: brightness(0) invert(1);
+}
 
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
+/* Pastikan gambar logout tidak membesar */
+#logout img {
+    width: 24px;
+    height: 24px;
+}
+
+#logout:hover img {
+    filter: brightness(0) invert(1); /* Ubah warna ikon menjadi putih */
 }
 
 
