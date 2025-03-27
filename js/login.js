@@ -6,6 +6,7 @@ function handleLogin(event) {
 
     if (username && password) {
         alert("Login berhasil!");
+        window.location.href = "donasi.html";
     } else {
         alert("Harap isi semua kolom!");
     }

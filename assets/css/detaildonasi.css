@@ -75,15 +75,16 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* Style untuk menu navigasi */
 .nav-links {
     list-style: none;
     display: flex;
+    align-items: center;  /* Pastikan semua elemen sejajar */
     gap: 20px;
 }
 
 .nav-links li {
-    display: inline;
+    display: flex; /* Pastikan tiap item fleksibel */
+    align-items: center; /* Menyelaraskan isi elemen */
 }
 
 .nav-links a {
@@ -94,12 +95,25 @@ nav ul li a {
     padding: 10px 15px;
     border-radius: 5px;
     transition: background 0.3s ease-in-out;
+    display: flex;
+    align-items: center; /* Supaya teks sejajar */
 }
 
 /* Hover efek */
 .nav-links a:hover {
     background: #B31312;
     color: white;
+}
+
+/* Gaya untuk gambar profil */
+#logout {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
 }
 
 /* Responsif untuk layar kecil */
@@ -114,7 +128,6 @@ nav ul li a {
         gap: 10px;
     }
 }
-
 
 
 button {
