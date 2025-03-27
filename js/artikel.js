@@ -4,14 +4,14 @@ const articles = [
         image: "https://img.antaranews.com/cache/1200x800/2025/02/17/RAPP.jpg.webp",
         description: "Kegiatan donor darah diadakan untuk membantu sesama.",
         date: "10 Maret 2025",
-        link: "#"
+        link: "artikelSatu.html"
     },
     {
         title: "Pelatihan Relawan",
         image: "https://www.pmimalangkota.or.id/wp-content/uploads/elementor/thumbs/first-aid-diklat-PMI-PMR-KSR-relawan-Kota-Malang-korps-Red-Cross-Indonesia-website-qchqw1gmqhu7wdy6rfn52g6r1ccycma3vcrbfy7ijm.jpg",
         description: "Relawan PMI mengikuti pelatihan tanggap darurat.",
         date: "5 Maret 2025",
-        link: "#"
+        link: "artikelDua.html"
     },
     {
         title: "Edukasi Kesehatan",
