@@ -343,10 +343,22 @@ footer {
     padding: 20px;
     border-radius: 5px;
     text-align: center;
-    width: 300px;
     position: relative;
+    margin: 0 auto;
+    width: 300px;
     transform: scale(0.7);
     transition: transform 0.3s ease-in-out;
+}
+
+.popup-content button {
+    display: block;
+    margin: 10px auto; /* Menengahkan tombol secara horizontal */
+    padding: 10px 15px;
+    background-color: B31312;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Saat popup aktif (fade-in) */

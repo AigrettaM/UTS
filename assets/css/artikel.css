@@ -1,40 +1,199 @@
-body {
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-}
-header {
-    background: #d32f2f;
-    color: white;
-    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}   
+
+body {
+    margin: 0;
+    padding: 0;
     text-align: center;
-    font-size: 20px;
+    background: #f8f9fa;
 }
 
-/* fitur pencaharian */
+header {
+    background: white; /* Warna merah khas donor darah */
+    color: #B31312;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Style untuk logo dan teks */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+#image1 {
+    width: 80px; /* Sesuaikan ukuran logo */
+    height: auto;
+    margin-right: 10px;
+}
+
+#image2 {
+    width: 75px; /* Sesuaikan ukuran logo */
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo ul{
+    text-decoration: none;
+}
+
+/* Style untuk menu navigasi */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #B31312;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Hover efek */
+.nav-links a:hover {
+    background: #B31312;
+    color: white;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
 .search-container {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     margin: 20px;
+    width: 100%;
 }
+
 .search-container input {
     width: 60%;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 16px;
-    padding-right: 40px;
 }
+
+/* Pastikan ikon tetap dalam input */
 .search-container .search-icon {
     position: absolute;
-    right: 20%;
+    right: 21%;
+    transform: translateX(-50%);
+    top: 50%;
+    transform: translateY(-50%);
     width: 20px;
     height: 20px;
     cursor: pointer;
 }
+
+.artikel-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.artikel-item {
+    width: 100%; 
+    max-width: 1000px; 
+    min-height: 120px; 
+    background: white;
+    margin: 10px auto; 
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.artikel-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.artikel-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+}
+
+.artikel-info {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.artikel-info h3 {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.artikel-info p {
+    margin: 3px 0;
+    font-size: 14px;
+    color: gray;
+}
+
+
 
 /*Artikel terbaru */
 .highlight-article {

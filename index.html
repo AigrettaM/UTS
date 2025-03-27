@@ -18,8 +18,8 @@
             </div>
             <ul class="nav-links">
                 <li><a href="register.html">Donor Sekarang</a></li>
-                <li><a href="stok-darah.html">Informasi</a></li>
-                <li><a href="#statistik">Statistik</a></li>
+                <li><a href="stokdarah.html">Informasi</a></li>
+                <li><a href="artikel.html">Artikel</a></li>
             </ul>
         </nav>
     </header>    
@@ -56,6 +56,7 @@
         <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </div>
     
+    <!-- mau diganti jadi artikel -->
     <section id="banner">
         <div class="banner">
             <p><strong>Event Donor:</strong> Ayo ikut donor darah di pusat kesehatan kota pada 25 Maret 2025.</p>
@@ -96,7 +97,7 @@
                         <span class="close-btn" onclick="closePopup()">&times;</span>
                         <h3>Daftar dirimu Sekarang!</h3>
                         <p>Dengan setetes darah Anda, dapat membantu banyak nyawa.</p>
-                        <button id="registerpop" onclick="">Daftar</button>
+                        <button id="registerpop" onclick="window.location.href='register.html'">Daftar</button>
                     </div>
                 </div>                
             </div>
@@ -106,15 +107,7 @@
     <section id="cta">
         <h2>Siap Menjadi Pahlawan?</h2>
         <button onclick="openPopup()">Donor Sekarang</button>
-                <div id="popup" class="popup-container" onclick="closeOutsidePopup(event)">
-                    <div class="popup-content">
-                        <span class="close-btn" onclick="closePopup()">&times;</span>
-                        <h2>Popup dengan Klik Luar</h2>
-                        <p>Klik di luar popup untuk menutup.</p>
-                        <button onclick="closePopup()">Tutup</button>
-                    </div>
-                </div>
-        <button id="findLocation">Lihat Lokasi Terdekat</button>
+        <button id="findLocation" onclick="window.location.href='lokasi.html'"">Lihat Lokasi Terdekat</button>
     </section>
 
     <footer>
