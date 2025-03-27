@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/image/Group 9.png">
-    <title>RedWave - Detail Donasi</title>
-    <link rel="stylesheet" href="assets/css/stokdarah.css">
+    <title>RedWave - Artikel</title>
+    <link rel="stylesheet" href="assets/css/artikel2.css">
 </head>
 <body>
     <header>
@@ -22,34 +22,26 @@
             </ul>
         </nav>
     </header>    
-
-    <div class="container">
-        <h1>Stok Darah</h1>
-        <h2>Stok Darah di PMI Indonesia</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Lokasi PMI</th>
-                    <th>Golongan A</th>
-                    <th>Golongan B</th>
-                    <th>Golongan AB</th>
-                    <th>Golongan O</th>
-                </tr>
-            </thead>
-            <tbody id="stockTableBody">
-            </tbody>
-        </table>
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Cari artikel" onkeyup="searchArticles()">
+        <img src="logo-cari.png" alt="Cari" class="search-icon">
     </div>
-    <script src="js/stok-darah.js"></script>
-
+    <section class="highlight-article" id="highlight">
+        <!-- Artikel terbaru akan dimuat di sini dengan JavaScript -->
+    </section>
+    <main>
+        <section class="articles" id="articles">
+            <!-- Artikel akan dimuat di sini dengan JavaScript -->
+        </section>
+    </main>
     <footer>
         <div class="footer-top">
             <button class="contact-btn">Kontak Kami</button>
             <div class="social-media">
                 <span>Ikuti sosial media kami</span>
-                <a href="#"><img src="assets/image/icons8-x-30.png" alt="X"></a>
-                <a href="#"><img src="assets/image/icons8-instagram-30.png" alt="Instagram"></a>
-                <a href="#"><img src="assets/image/icons8-youtube-30.png" alt="YouTube"></a>
+                <a href="#"><img src="assets/image/ig-30.png" alt="X"></a>
+                <a href="#"><img src="assets/image/x-30.png" alt="Instagram"></a>
+                <a href="#"><img src="assets/image/yt-30.png" alt="YouTube"></a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -58,6 +50,6 @@
         </div>
     </footer>
 
-    <script src="assets/js/lokasi.js"></script>
+    <script src="js/artikel.js"></script>
     </body>
 </html>
