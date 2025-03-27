@@ -383,6 +383,7 @@ footer {
     width: 100%;
     height: 80vh;
     object-fit: cover;
+    filter: brightness(0.7);
 }
 
 .caption {
@@ -393,6 +394,7 @@ footer {
     transform: translateY(-50%);
     color: white;
     max-width: 40%;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);;
 }
 
 .caption h2 {
